@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Deociety</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/new-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="WhatsApp Image 2025-08-23 at 22.16.44_a6e947d5.jpg" alt="" srcset="" height="100px" width="100px"></div>
+            <div class="nav-info">
+                <span>Village Name: Static</span>
+                <span>Ward No: 123</span>
+                <span>Pincode: 456789</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="proposal.html">Raise Proposal</a></li>
+                <li><a href="../aman.html">Voting</a></li>
+                <li><a href="tender.html">Tender Review</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>Welcome to Your Dashboard</h2>
+            <div class="card">
+                <h3>About Deociety</h3>
+                <p>Deociety is a pioneering platform dedicated to enhancing transparency and community participation in local governance. By leveraging decentralized technologies, we empower citizens to raise proposals, vote on tenders, and oversee civic projects, ensuring every voice is heard and every decision is fair.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Community Announcements</h2>
+            <div class="card">
+                <ul id="announcements-list" class="tender-list">
+                    <!-- Announcements will be dynamically inserted here -->
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Metrics</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>Proposals Submitted</h4>
+                    <p id="proposals-submitted" style="font-size: 2rem; font-weight: 700;">0</p>
+                </div>
+                <div class="card">
+                    <h4>Active Tenders</h4>
+                    <p id="active-tenders" style="font-size: 2rem; font-weight: 700;">0</p>
+                </div>
+                <div class="card">
+                    <h4>Community Members</h4>
+                    <p id="community-members" style="font-size: 2rem; font-weight: 700;">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Recent Proposals</h2>
+            <div class="grid" id="recent-proposals-grid">
+                <!-- Proposals will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@deociety.org</p>
+        <p>Phone: +123 456 7890</p>
+    </footer>
+
+    <script src="js/localStorageManager.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

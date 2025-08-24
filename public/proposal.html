@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raise Proposal - Deociety</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/new-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Deociety</div>
+            <div class="nav-info">
+                <span>Village Name: Static</span>
+                <span>Ward No: 123</span>
+                <span>Pincode: 456789</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="proposal.html">Raise Proposal</a></li>
+                <li><a href="../aman.html">Voting</a></li>
+                <li><a href="tender.html">Tender Review</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>Raise a Proposal</h2>
+            <div class="card">
+                <p>Have an idea to improve your community? Fill out the form below to submit your proposal for review. Please be as detailed as possible.</p>
+                <form id="proposal-form"> 
+                    <div class="form-group">
+                        <label for="proposal-title">Title</label>
+                        <input type="text" id="proposal-title" name="proposal-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="proposal-details">Proposal Details</label>
+                        <textarea id="proposal-details" name="proposal-details" rows="8" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Proposal</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@deociety.org</p>
+        <p>Phone: +123 456 7890</p>
+    </footer>
+
+    <script src="js/localStorageManager.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

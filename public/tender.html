@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tender Review - Deociety</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/new-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Deociety</div>
+            <div class="nav-info">
+                <span>Village Name: Static</span>
+                <span>Ward No: 123</span>
+                <span>Pincode: 456789</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="proposal.html">Raise Proposal</a></li>
+                <li><a href="../aman.html">Voting</a></li>
+                <li><a href="tender.html">Tender Review</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>Tender Review</h2>
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'ongoing')">Ongoing</button>
+                <button class="tab-link" onclick="openTab(event, 'completed')">Completed</button>
+            </div>
+
+            <div id="ongoing" class="tab-content">
+                <h3>Ongoing Tenders</h3>
+                <ul id="ongoing-tenders-list" class="tender-list">
+                    <!-- Tenders will be dynamically inserted here -->
+                </ul>
+            </div>
+
+            <div id="completed" class="tab-content">
+                <h3>Completed Tenders</h3>
+                <ul id="completed-tenders-list" class="tender-list">
+                    <!-- Tenders will be dynamically inserted here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@deociety.org</p>
+        <p>Phone: +123 456 7890</p>
+    </footer>
+
+    <script src="js/localStorageManage"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const ongoingTenders = [
+          {
+            title: "Community Hall Construction",
+            amount: "₹35,00,000",
+            deadline: "2025-12-15",
+            description: "Build a multipurpose hall with seating for 300 people."
+          },
+          {
+            title: "Village Road Paving",
+            amount: "₹18,75,000",
+            deadline: "2025-11-30",
+            description: "Paving 2.5 km stretch with concrete blocks."
+          },
+          {
+            title: "Water Tank Installation",
+            amount: "₹9,50,000",
+            deadline: "2025-10-20",
+            description: "Install 3 overhead tanks with 20,000L capacity each."
+          }
+        ];
+      
+        const completedTenders = [
+          {
+            title: "Primary School Renovation",
+            amount: "₹22,00,000",
+            completedOn: "2025-07-10",
+            description: "Repaired classrooms, painted walls, and upgraded toilets."
+          },
+          {
+            title: "Solar Street Lights",
+            amount: "₹15,60,000",
+            completedOn: "2025-06-25",
+            description: "Installed 120 solar-powered street lights across the village."
+          }
+        ];
+      
+        function renderTender(tender, isCompleted = false) {
+          const li = document.createElement("li");
+          li.className = "tender-item";
+          li.innerHTML = `
+            <h4>${tender.title}</h4>
+            <p>${tender.description}</p>
+            <p><strong>Amount:</strong> ${tender.amount}</p>
+            <p><strong>${isCompleted ? "Completed On" : "Deadline"}:</strong> ${isCompleted ? tender.completedOn : tender.deadline}</p>
+          `;
+          return li;
+        }
+      
+        const ongoingList = document.getElementById("ongoing-tenders-list");
+        const completedList = document.getElementById("completed-tenders-list");
+      
+        ongoingTenders.forEach(t => ongoingList.appendChild(renderTender(t)));
+        completedTenders.forEach(t => completedList.appendChild(renderTender(t, true)));
+      </script>
+</body>
+</html>

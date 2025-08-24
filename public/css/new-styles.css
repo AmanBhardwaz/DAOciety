@@ -1,0 +1,259 @@
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #1e293b; /* Darker text */
+    font-weight: 700; /* Bolder text */
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #0ea5e9;
+}
+
+.container {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #cbd5e1;
+    background: #f1f5f9;
+    font-size: 1rem;
+    color: #1e293b;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+.btn {
+  cursor: pointer;
+  padding: 14px 22px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
+  color: #fff;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #0284c7, #0ea5e9);
+  box-shadow: 0 0 12px rgba(14, 165, 233, 0.6);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* For Login Page */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.login-container h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.login-container p {
+    font-size: 1.25rem;
+    color: #475569;
+    margin-bottom: 2.5rem;
+}
+
+.login-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* General Content Sections */
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.tender-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tender-item {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.tender-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.tender-item h3 {
+    margin-top: 0;
+    color: #1e293b;
+}
+
+.tender-item p {
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+/* Tab styles for tender page */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.tab-link {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #475569;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab-link.active,
+.tab-link:hover {
+    color: #0ea5e9;
+    border-bottom-color: #0ea5e9;
+}
+
+.tab-content {
+    display: none;
+}
+
+#ongoing {
+    display: block; /* Show first tab by default */
+}
+
+/* Admin Panel Action Buttons */
+.admin-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn.btn-approve {
+    background: linear-gradient(to right, #28a745, #218838);
+}
+
+.btn.btn-approve:hover {
+    background: linear-gradient(to right, #218838, #1e7e34);
+    box-shadow: 0 0 12px rgba(40, 167, 69, 0.6);
+}
+
+.btn.btn-reject {
+    background: linear-gradient(to right, #dc3545, #c82333);
+}
+
+.btn.btn-reject:hover {
+    background: linear-gradient(to right, #c82333, #bd2130);
+    box-shadow: 0 0 12px rgba(220, 53, 69, 0.6);
+}

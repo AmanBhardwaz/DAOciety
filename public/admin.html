@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Deociety</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/new-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Deociety</div>
+            <div class="nav-info">
+                <span>Village Name: Static</span>
+                <span>Ward No: 123</span>
+                <span>Pincode: 456789</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="proposal.html">Raise Proposal</a></li>
+                <li><a href="../aman.html">Voting</a></li>
+                <li><a href="tender.html">Tender Review</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>Admin Panel</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Proposal Management</h3>
+                    <p>Review and approve or reject new community proposals.</p>
+                    <button id="view-proposals-btn" class="btn">View Proposals</button>
+                </div>
+                <div class="card">
+                    <h3>Tender Oversight</h3>
+                    <p>Monitor ongoing tenders and review completed project reports.</p>
+                    <button class="btn">Manage Tenders</button>
+                </div>
+                <div class="card">
+                    <h3>Post an Announcement</h3>
+                    <p>Share important updates and news with the community.</p>
+                    <button id="create-announcement-btn" class="btn">Create Announcement</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- This section will be for managing proposals, initially hidden -->
+        <!-- This section will be for creating announcements, initially hidden -->
+        <section id="announcement-creation-section" class="content-section" style="display: none;">
+            <h2>Create a New Announcement</h2>
+            <div class="card">
+                <form id="announcement-form">
+                    <div class="form-group">
+                        <label for="announcement-text">Announcement</label>
+                        <textarea id="announcement-text" name="announcement-text" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Post Announcement</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="proposal-management-section" class="content-section" style="display: none;">
+            <h2>Review Proposals</h2>
+            <div class="card">
+                <ul id="proposals-list" class="tender-list">
+                    <!-- Pending proposals will be dynamically inserted here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@deociety.org</p>
+        <p>Phone: +123 456 7890</p>
+    </footer>
+
+    <script src="js/localStorageManager.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
